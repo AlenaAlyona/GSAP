@@ -80,6 +80,8 @@
 </template>
 
 <script>
+import { TimelineMax, Expo } from "gsap";
+
 export default {
   name: "NavBar",
 
@@ -87,6 +89,37 @@ export default {
     marqueeInnerText() {
       return (title) => new Array(50).fill(title).join(" — ");
     },
+  },
+  mounted() {
+    const t1 = new TimelineMax({ paused: true });
+
+    t1.to(".nav-container", 1, {
+      left: 0,
+      ease: Expo.easeInOut,
+    });
+
+    t1.staggerFrom(
+      ".menu > div",
+      0.8,
+      { y: 100, opacity: 0, ease: Expo.easeOut },
+      "0.1",
+      "-=0.4"
+    );
+
+    t1.reverse();
+    document
+      .getElementsByClassName("menu-open")[0]
+      .addEventListener("click", (e) => {
+        t1.reversed(!t1.reversed());
+        this.$emit("click", e);
+      });
+
+    document
+      .getElementsByClassName("menu-close")[0]
+      .addEventListener("click", (e) => {
+        t1.reversed(!t1.reversed());
+        this.$emit("click", e);
+      });
   },
 };
 </script>
