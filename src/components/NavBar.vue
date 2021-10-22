@@ -57,12 +57,21 @@
           </div>
         </div>
       </div>
-      <div class="menu__item">
+      <div class="menu__item last">
         <a class="menu__item-link">Showcase Six</a>
         <img class="menu__item-img" src="@/assets/images/lain.jpeg" />
         <div class="marquee">
           <div class="marquee__inner">
             <span>{{ marqueeInnerText("Showcase Six") }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="menu__item last">
+        <a class="menu__item-link">Showcase Seven</a>
+        <img class="menu__item-img" src="@/assets/images/lain.jpeg" />
+        <div class="marquee">
+          <div class="marquee__inner">
+            <span>{{ marqueeInnerText("Showcase Seven") }}</span>
           </div>
         </div>
       </div>
@@ -117,6 +126,7 @@ export default {
   width: 100%;
   height: 100vh;
   background: #fff;
+  overflow: scroll;
 }
 
 .menu__item {
@@ -165,12 +175,12 @@ export default {
 }
 
 .menu {
-  padding: 10vh 0 25vh;
+  padding-top: 10vh;
+  padding-bottom: 5vh;
   --offset: 20vw;
   --move-initial: calc(-25% + var(--offset));
   --move-final: calc(-50% + var(--offset));
   font-size: 7vw;
-  overflow: scroll;
 }
 
 .marquee {
