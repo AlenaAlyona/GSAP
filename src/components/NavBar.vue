@@ -3,74 +3,74 @@
   <div class="nav-container">
     <div class="menu-close">close</div>
     <nav class="menu">
-      <div class="menu__item">
-        <a class="menu__item-link">Home</a>
-        <img class="menu__item-img" src="@/assets/images/lain.jpeg" />
+      <div class="menu-item">
+        <a class="menu-item-link">Home</a>
+        <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
         <div class="marquee">
-          <div class="marquee__inner">
+          <div class="marquee-inner">
             <span>{{ marqueeInnerText("Home") }}</span>
           </div>
         </div>
       </div>
-      <div class="menu__item">
-        <a class="menu__item-link">Showcase One</a>
-        <img class="menu__item-img" src="@/assets/images/lain.jpeg" />
+      <div class="menu-item">
+        <a class="menu-item-link">Showcase One</a>
+        <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
         <div class="marquee">
-          <div class="marquee__inner">
+          <div class="marquee-inner">
             <span>{{ marqueeInnerText("Showcase One") }}</span>
           </div>
         </div>
       </div>
-      <div class="menu__item">
-        <a class="menu__item-link">Showcase Two</a>
-        <img class="menu__item-img" src="@/assets/images/lain.jpeg" />
+      <div class="menu-item">
+        <a class="menu-item-link">Showcase Two</a>
+        <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
         <div class="marquee">
-          <div class="marquee__inner">
+          <div class="marquee-inner">
             <span>{{ marqueeInnerText("Showcase Two") }}</span>
           </div>
         </div>
       </div>
-      <div class="menu__item">
-        <a class="menu__item-link">Showcase Three</a>
-        <img class="menu__item-img" src="@/assets/images/lain.jpeg" />
+      <div class="menu-item">
+        <a class="menu-item-link">Showcase Three</a>
+        <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
         <div class="marquee">
-          <div class="marquee__inner">
+          <div class="marquee-inner">
             <span>{{ marqueeInnerText("Showcase Three") }}</span>
           </div>
         </div>
       </div>
-      <div class="menu__item">
-        <a class="menu__item-link">Showcase Four</a>
-        <img class="menu__item-img" src="@/assets/images/lain.jpeg" />
+      <div class="menu-item">
+        <a class="menu-item-link">Showcase Four</a>
+        <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
         <div class="marquee">
-          <div class="marquee__inner">
+          <div class="marquee-inner">
             <span>{{ marqueeInnerText("Showcase Four") }}</span>
           </div>
         </div>
       </div>
-      <div class="menu__item">
-        <a class="menu__item-link">Showcase Five</a>
-        <img class="menu__item-img" src="@/assets/images/lain.jpeg" />
+      <div class="menu-item">
+        <a class="menu-item-link">Showcase Five</a>
+        <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
         <div class="marquee">
-          <div class="marquee__inner">
+          <div class="marquee-inner">
             <span>{{ marqueeInnerText("Showcase Five") }}</span>
           </div>
         </div>
       </div>
-      <div class="menu__item last">
-        <a class="menu__item-link">Showcase Six</a>
-        <img class="menu__item-img" src="@/assets/images/lain.jpeg" />
+      <div class="menu-item">
+        <a class="menu-item-link">Showcase Six</a>
+        <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
         <div class="marquee">
-          <div class="marquee__inner">
+          <div class="marquee-inner">
             <span>{{ marqueeInnerText("Showcase Six") }}</span>
           </div>
         </div>
       </div>
-      <div class="menu__item last">
-        <a class="menu__item-link">Showcase Seven</a>
-        <img class="menu__item-img" src="@/assets/images/lain.jpeg" />
+      <div class="menu-item">
+        <a class="menu-item-link">Showcase Seven</a>
+        <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
         <div class="marquee">
-          <div class="marquee__inner">
+          <div class="marquee-inner">
             <span>{{ marqueeInnerText("Showcase Seven") }}</span>
           </div>
         </div>
@@ -162,12 +162,12 @@ export default {
   overflow: scroll;
 }
 
-.menu__item {
+.menu-item {
   position: relative;
   padding: 0 6vw;
 }
 
-.menu__item-link {
+.menu-item-link {
   display: inline-block;
   cursor: pointer;
   position: relative;
@@ -175,7 +175,7 @@ export default {
   margin: 10px;
 }
 
-.menu__item-link::before {
+.menu-item-link::before {
   all: initial;
   counter-increment: menu;
   position: absolute;
@@ -184,12 +184,12 @@ export default {
   pointer-events: none;
 }
 
-.menu__item-link:hover {
+.menu-item-link:hover {
   transition-duration: 0.1s;
   opacity: 0;
 }
 
-.menu__item-img {
+.menu-item-img {
   z-index: 2;
   pointer-events: none;
   position: absolute;
@@ -201,7 +201,7 @@ export default {
   transform: scale(0);
 }
 
-.menu__item-link:hover + .menu__item-img {
+.menu-item-link:hover + .menu-item-img {
   opacity: 1;
   transform: scale(1);
   transition: all 0.4s;
@@ -225,7 +225,7 @@ export default {
   pointer-events: none;
 }
 
-.marquee__inner {
+.marquee-inner {
   width: fit-content;
   display: flex;
   position: relative;
@@ -234,13 +234,13 @@ export default {
   transform: translateX(60px);
 }
 
-.menu__item-link:hover ~ .marquee .marquee__inner {
+.menu-item-link:hover ~ .marquee .marquee-inner {
   opacity: 1;
   transform: translateX(0px);
   transition-duration: 0.4s;
 }
 
-.menu__item-link,
+.menu-item-link,
 .marquee span {
   white-space: nowrap;
   font-size: 7vw;
