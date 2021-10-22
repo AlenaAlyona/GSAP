@@ -12,40 +12,34 @@
         <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
         <div class="marquee">
           <div class="marquee-inner">
-            <span>Home - Home - Home - Home - Home - Home - Home</span>
+            <span>{{ marqueeInnerText("Home") }}</span>
           </div>
         </div>
       </div>
       <div class="menu-item">
-        <a class="menu-item-link">Showcase</a>
+        <a class="menu-item-link">Showcase One</a>
         <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
         <div class="marquee">
           <div class="marquee-inner">
-            <span
-              >Showcase - Showcase - Showcase - Showcase - Showcase - Showcase -
-              Showcase</span
-            >
+            <span>{{ marqueeInnerText("Showcase One") }}</span>
           </div>
         </div>
       </div>
       <div class="menu-item">
-        <a class="menu-item-link">About</a>
+        <a class="menu-item-link">Showcase Two</a>
         <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
         <div class="marquee">
           <div class="marquee-inner">
-            <span>About - About - About - About - About - About - About</span>
+            <span>{{ marqueeInnerText("Showcase Two") }}</span>
           </div>
         </div>
       </div>
       <div class="menu-item">
-        <a class="menu-item-link">Contact</a>
+        <a class="menu-item-link">Showcase Three</a>
         <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
         <div class="marquee">
           <div class="marquee-inner">
-            <span
-              >Contact - Contact - Contact - Contact - Contact - Contact -
-              Contact</span
-            >
+            <span>{{ marqueeInnerText("Showcase Three") }}</span>
           </div>
         </div>
       </div>
@@ -55,6 +49,12 @@
 <script>
 export default {
   name: "NavBar",
+
+  computed: {
+    marqueeInnerText() {
+      return (title) => new Array(50).fill(title).join(" — ");
+    },
+  },
 };
 </script>
 
