@@ -13,11 +13,13 @@
         </div>
       </div>
       <div class="menu-item">
-        <a class="menu-item-link">Showcase One</a>
+        <router-link to="/basics" class="menu-item-link"
+          >The Basics of GreenSock</router-link
+        >
         <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
         <div class="marquee">
           <div class="marquee-inner">
-            <span>{{ marqueeInnerText("Showcase One") }}</span>
+            <span>{{ marqueeInnerText("The Basics of GreenSock") }}</span>
           </div>
         </div>
       </div>
@@ -173,6 +175,8 @@ export default {
   position: relative;
   transition: opacity 0.4s;
   margin: 10px;
+  text-decoration: none;
+  color: #161616;
 }
 
 .menu-item-link::before {
