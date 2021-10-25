@@ -31,16 +31,36 @@
           </div>
         </div>
         <div class="menu-item">
-          <router-link to="/" class="menu-item-link">Showcase Two</router-link>
+          <a to="/" @click="switchVisibility" class="menu-item-link-non-closing"
+            >Greensock Projects</a
+          >
           <img
             class="menu-item-img"
             src="@/assets/images/navigation/lain.jpeg"
           />
           <div class="marquee">
             <div class="marquee-inner">
-              <span>{{ marqueeInnerText("Showcase Two") }}</span>
+              <span>{{ marqueeInnerText("Greensock Projects") }}</span>
             </div>
           </div>
+          <ul v-if="visible" class="greensock-projects-list">
+            <li class="menu-item">
+              <router-link to="/reveal" class="menu-item-link" id="listed-item"
+                >Reveal animations project</router-link
+              >
+              <img
+                class="menu-item-img"
+                src="@/assets/images/navigation/lain.jpeg"
+              />
+              <div class="marquee">
+                <div class="marquee-inner">
+                  <span>{{
+                    marqueeInnerText("Reveal animations project")
+                  }}</span>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
         <div class="menu-item">
           <router-link to="/" class="menu-item-link"
@@ -67,9 +87,24 @@ import { TimelineMax, Expo } from "gsap";
 export default {
   name: "NavBar",
 
+  data() {
+    return {
+      visible: false,
+    };
+  },
+
   computed: {
     marqueeInnerText() {
       return (title) => new Array(50).fill(title).join(" — ");
+    },
+  },
+
+  methods: {
+    switchVisibility() {
+      if (!this.visible) {
+        return (this.visible = !this.visible);
+      }
+      return (this.visible = false);
     },
   },
 
@@ -165,7 +200,8 @@ export default {
   padding: 0 6vw;
 }
 
-.menu-item-link {
+.menu-item-link,
+.menu-item-link-non-closing {
   display: inline-block;
   cursor: pointer;
   position: relative;
@@ -175,7 +211,12 @@ export default {
   color: #161616;
 }
 
-.menu-item-link::before {
+#listed-item {
+  font-size: 4vw;
+}
+
+.menu-item-link::before,
+.menu-item-link-non-closing::before {
   all: initial;
   counter-increment: menu;
   position: absolute;
@@ -184,7 +225,8 @@ export default {
   pointer-events: none;
 }
 
-.menu-item-link:hover {
+.menu-item-link:hover,
+.menu-item-link-non-closing:hover {
   transition-duration: 0.1s;
   opacity: 0;
 }
@@ -201,10 +243,16 @@ export default {
   transform: scale(0);
 }
 
-.menu-item-link:hover + .menu-item-img {
+.menu-item-link:hover + .menu-item-img,
+.menu-item-link-non-closing:hover + .menu-item-img {
   opacity: 1;
   transform: scale(1);
   transition: all 0.4s;
+}
+
+.greensock-projects-list {
+  margin: 0;
+  list-style-type: none;
 }
 
 .menu {
@@ -234,13 +282,15 @@ export default {
   transform: translateX(60px);
 }
 
-.menu-item-link:hover ~ .marquee .marquee-inner {
+.menu-item-link:hover ~ .marquee .marquee-inner,
+.menu-item-link-non-closing:hover ~ .marquee .marquee-inner {
   opacity: 1;
   transform: translateX(0px);
   transition-duration: 0.4s;
 }
 
 .menu-item-link,
+.menu-item-link-non-closing,
 .marquee span {
   white-space: nowrap;
   font-size: 7vw;
