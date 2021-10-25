@@ -34,8 +34,16 @@ export default {
 
   mounted() {
     const imgOne = document.querySelector(".one");
+    const tween = gsap.to(".two", { y: 200, duration: 5, paused: true });
 
-    gsap.set(imgOne, { opacity: 0 }); // <-- set css values for an element
+    setTimeout(() => {
+      // tween.resume();
+      // tween.kill();
+      // tween.delay(1);
+      // tween.duration(2);
+      tween.seek(2.5);
+      tween.play();
+    }, 2000);
 
     gsap.registerEffect({
       name: "imgAnimation",
@@ -50,7 +58,6 @@ export default {
       defaults: { duration: 2 },
     });
     gsap.effects.imgAnimation(imgOne, { duration: 5 });
-    gsap.effects.imgAnimation(".two", { duration: 3 });
     gsap.effects.imgAnimation(".three");
     gsap.to(".btn", {
       duration: 0.5,
