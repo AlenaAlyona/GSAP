@@ -34,8 +34,12 @@ export default {
       autoAlpha: 0,
       y: -100,
       rotation: 90,
-      ease: "back.out(1.7)",
+      ease: "bounce",
       duration: 2,
+      delay: 0.5,
+      repeat: -1, // <- repeats infinitely
+      repeatDelay: 0.2,
+      yoyo: true, // <- reverts animation
     });
   },
 };
