@@ -4,7 +4,7 @@
     <div class="menu-close">close</div>
     <nav class="menu">
       <div class="menu-item">
-        <a class="menu-item-link">Home</a>
+        <router-link to="/" class="menu-item-link">Home</router-link>
         <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
         <div class="marquee">
           <div class="marquee-inner">
@@ -24,7 +24,7 @@
         </div>
       </div>
       <div class="menu-item">
-        <a class="menu-item-link">Showcase Two</a>
+        <router-link to="/" class="menu-item-link">Showcase Two</router-link>
         <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
         <div class="marquee">
           <div class="marquee-inner">
@@ -33,7 +33,7 @@
         </div>
       </div>
       <div class="menu-item">
-        <a class="menu-item-link">Showcase Three</a>
+        <router-link to="/" class="menu-item-link">Showcase Three</router-link>
         <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
         <div class="marquee">
           <div class="marquee-inner">
@@ -42,7 +42,7 @@
         </div>
       </div>
       <div class="menu-item">
-        <a class="menu-item-link">Showcase Four</a>
+        <router-link to="/" class="menu-item-link">Showcase Four</router-link>
         <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
         <div class="marquee">
           <div class="marquee-inner">
@@ -51,7 +51,7 @@
         </div>
       </div>
       <div class="menu-item">
-        <a class="menu-item-link">Showcase Five</a>
+        <router-link to="/" class="menu-item-link">Showcase Five</router-link>
         <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
         <div class="marquee">
           <div class="marquee-inner">
@@ -60,7 +60,7 @@
         </div>
       </div>
       <div class="menu-item">
-        <a class="menu-item-link">Showcase Six</a>
+        <router-link to="/" class="menu-item-link">Showcase Six</router-link>
         <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
         <div class="marquee">
           <div class="marquee-inner">
@@ -69,7 +69,7 @@
         </div>
       </div>
       <div class="menu-item">
-        <a class="menu-item-link">Showcase Seven</a>
+        <router-link to="/" class="menu-item-link">Showcase Seven</router-link>
         <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
         <div class="marquee">
           <div class="marquee-inner">
