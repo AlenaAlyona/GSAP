@@ -35,11 +35,13 @@ export default {
   mounted() {
     const imgOne = document.querySelector(".one");
     gsap.to(imgOne, {
-      keyframes: [
-        { duration: 0.3, x: 100 },
-        { duration: 0.3, y: 100 },
-        { duration: 0.3, x: 200 },
-      ],
+      x: 100,
+      duration: 1,
+      repeat: 1,
+      onComplete: () => console.log("COMPLETE"),
+      onStart: () => console.log("START"),
+      onUpdate: () => console.log("UPDATE"),
+      onRepeat: () => console.log("REPEAT"),
     });
     gsap.to(".btn", {
       duration: 0.5,
