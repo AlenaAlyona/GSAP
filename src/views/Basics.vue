@@ -19,7 +19,6 @@
     <button class="btn">CONFIRM</button>
     <button class="btn">CONFIRM</button>
     </div>  -->
-    <button class="btn">click me!</button>
   </div>
 </template>
 
@@ -31,9 +30,12 @@ export default {
 
   mounted() {
     const img1 = document.querySelector(".img1");
-    // from method is good when you want to make a reaveal animation
-    document.querySelector(".btn").addEventListener("click", () => {
-      gsap.fromTo(img1, { autoAlpha: 0 }, { autoAlpha: 1, duration: 2 });
+    gsap.from(img1, {
+      autoAlpha: 0,
+      y: -100,
+      rotation: 90,
+      ease: "back.out(1.7)",
+      duration: 2,
     });
   },
 };
