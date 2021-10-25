@@ -22,6 +22,24 @@
   </div>
 </template>
 
+<script>
+import gsap from "gsap";
+
+export default {
+  name: "Basics",
+
+  mounted() {
+    gsap.to(".img1", {
+      x: 100,
+      y: 100,
+      rotation: 45,
+      backgroundColor: "#fff",
+      duration: 2,
+    });
+  },
+};
+</script>
+
 <style scoped>
 .basics {
   background: #222;
