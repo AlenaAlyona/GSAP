@@ -92,6 +92,7 @@ export default {
       return (title) => new Array(50).fill(title).join(" — ");
     },
   },
+
   mounted() {
     const t1 = new TimelineMax({ paused: true });
 
@@ -122,6 +123,15 @@ export default {
         t1.reversed(!t1.reversed());
         this.$emit("click", e);
       });
+
+    Array.from(document.getElementsByClassName("menu-item-link")).forEach(
+      (el) => {
+        el.addEventListener("click", (e) => {
+          t1.reversed(!t1.reversed());
+          this.$emit("click", e);
+        });
+      }
+    );
   },
 };
 </script>
