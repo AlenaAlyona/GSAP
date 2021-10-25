@@ -41,42 +41,6 @@
           </div>
         </div>
       </div>
-      <div class="menu-item">
-        <router-link to="/" class="menu-item-link">Showcase Four</router-link>
-        <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
-        <div class="marquee">
-          <div class="marquee-inner">
-            <span>{{ marqueeInnerText("Showcase Four") }}</span>
-          </div>
-        </div>
-      </div>
-      <div class="menu-item">
-        <router-link to="/" class="menu-item-link">Showcase Five</router-link>
-        <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
-        <div class="marquee">
-          <div class="marquee-inner">
-            <span>{{ marqueeInnerText("Showcase Five") }}</span>
-          </div>
-        </div>
-      </div>
-      <div class="menu-item">
-        <router-link to="/" class="menu-item-link">Showcase Six</router-link>
-        <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
-        <div class="marquee">
-          <div class="marquee-inner">
-            <span>{{ marqueeInnerText("Showcase Six") }}</span>
-          </div>
-        </div>
-      </div>
-      <div class="menu-item">
-        <router-link to="/" class="menu-item-link">Showcase Seven</router-link>
-        <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
-        <div class="marquee">
-          <div class="marquee-inner">
-            <span>{{ marqueeInnerText("Showcase Seven") }}</span>
-          </div>
-        </div>
-      </div>
     </nav>
   </div>
 </template>
