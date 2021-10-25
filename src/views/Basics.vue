@@ -34,15 +34,21 @@ export default {
 
   mounted() {
     const imgOne = document.querySelector(".one");
-    gsap.to(imgOne, {
-      x: 100,
-      duration: 1,
-      repeat: 1,
-      onComplete: () => console.log("COMPLETE"),
-      onStart: () => console.log("START"),
-      onUpdate: () => console.log("UPDATE"),
-      onRepeat: () => console.log("REPEAT"),
+    gsap.registerEffect({
+      name: "imgAnimation",
+      effect: (targets, config) => {
+        return gsap.to(targets, {
+          duration: config.duration,
+          y: 200,
+          scale: 1.4,
+          rotation: 360,
+        });
+      },
+      defaults: { duration: 2 },
     });
+    gsap.effects.imgAnimation(imgOne, { duration: 5 });
+    gsap.effects.imgAnimation(".two", { duration: 3 });
+    gsap.effects.imgAnimation(".three");
     gsap.to(".btn", {
       duration: 0.5,
       stagger: 0.2,
