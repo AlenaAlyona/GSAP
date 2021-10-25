@@ -34,6 +34,9 @@ export default {
 
   mounted() {
     const imgOne = document.querySelector(".one");
+
+    gsap.set(imgOne, { opacity: 0 }); // <-- set css values for an element
+
     gsap.registerEffect({
       name: "imgAnimation",
       effect: (targets, config) => {
