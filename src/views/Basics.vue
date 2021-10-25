@@ -16,17 +16,6 @@
 
     <h1 class="title">Welcome to the sandbox.</h1>
     <p class="txt">Let's play with Greensock.</p>
-
-    <!-- Stagger -->
-
-    <div class="container-btns">
-      <button class="btn">CONFIRM</button>
-      <button class="btn">CONFIRM</button>
-      <button class="btn">CONFIRM</button>
-      <button class="btn">CONFIRM</button>
-      <button class="btn">CONFIRM</button>
-      <button class="btn">CONFIRM</button>
-    </div>
   </div>
 </template>
 
@@ -61,18 +50,13 @@ export default {
     setTimeout(() => {
       TL.restart();
     }, 2000);
-
-    gsap.to(".btn", {
-      duration: 0.5,
-      stagger: 0.2,
-      x: "random(-100, 100, 10)", // <- or you can add an arrays of values like so: random([20, 80, -10, 50, -70])"
-    });
   },
 };
 </script>
 
 <style scoped>
 .basics {
+  height: 100vh;
   background: #222;
   overflow: hidden;
   display: flex;
