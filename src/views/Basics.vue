@@ -12,12 +12,12 @@
     <!-- Stagger -->
 
     <!-- <div class="container-btns">
-    <button class="btn">CONFIRM</button>
-    <button class="btn">CONFIRM</button>
-    <button class="btn">CONFIRM</button>
-    <button class="btn">CONFIRM</button>
-    <button class="btn">CONFIRM</button>
-    <button class="btn">CONFIRM</button>
+      <button class="btn">CONFIRM</button>
+      <button class="btn">CONFIRM</button>
+      <button class="btn">CONFIRM</button>
+      <button class="btn">CONFIRM</button>
+      <button class="btn">CONFIRM</button>
+      <button class="btn">CONFIRM</button>
     </div>  -->
   </div>
 </template>
@@ -48,15 +48,15 @@ export default {
 .basics {
   background: #222;
   overflow: hidden;
-  height: 90vh;
-  padding-top: 10vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .container-images {
   display: flex;
   justify-content: center;
-  width: 100%;
   margin-top: 50px;
+  padding-top: 5vh;
 }
 
 img {
@@ -66,7 +66,7 @@ img {
   margin: 20px;
 }
 
-.img1 {
+.img {
   visibility: hidden;
 }
 
@@ -90,7 +90,6 @@ p {
 }
 
 .container-btns {
-  margin-top: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,9 +106,6 @@ p {
 }
 
 @media screen and (max-width: 910px) {
-  .container-images {
-    margin-top: 20px;
-  }
   img {
     width: 30%;
     margin: 0px;
