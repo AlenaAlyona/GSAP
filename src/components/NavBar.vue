@@ -6,7 +6,10 @@
       <nav class="menu">
         <div class="menu-item">
           <router-link to="/" class="menu-item-link">Home</router-link>
-          <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
+          <img
+            class="menu-item-img"
+            src="@/assets/images/navigation/lain.jpeg"
+          />
           <div class="marquee">
             <div class="marquee-inner">
               <span>{{ marqueeInnerText("Home") }}</span>
@@ -17,7 +20,10 @@
           <router-link to="/basics" class="menu-item-link"
             >The Basics of GreenSock</router-link
           >
-          <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
+          <img
+            class="menu-item-img"
+            src="@/assets/images/navigation/basics.png"
+          />
           <div class="marquee">
             <div class="marquee-inner">
               <span>{{ marqueeInnerText("The Basics of GreenSock") }}</span>
@@ -26,7 +32,10 @@
         </div>
         <div class="menu-item">
           <router-link to="/" class="menu-item-link">Showcase Two</router-link>
-          <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
+          <img
+            class="menu-item-img"
+            src="@/assets/images/navigation/lain.jpeg"
+          />
           <div class="marquee">
             <div class="marquee-inner">
               <span>{{ marqueeInnerText("Showcase Two") }}</span>
@@ -37,7 +46,10 @@
           <router-link to="/" class="menu-item-link"
             >Showcase Three</router-link
           >
-          <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
+          <img
+            class="menu-item-img"
+            src="@/assets/images/navigation/lain.jpeg"
+          />
           <div class="marquee">
             <div class="marquee-inner">
               <span>{{ marqueeInnerText("Showcase Three") }}</span>

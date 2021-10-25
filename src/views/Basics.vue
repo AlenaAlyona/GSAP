@@ -1,11 +1,15 @@
 <template>
   <div class="basics">
     <div class="container-images">
-      <img class="img one" src="../assets/images/cat.svg" alt="chat" />
-      <img class="img two" src="../assets/images/fuji.svg" alt="mount fuji" />
+      <img class="img one" src="../assets/images/basics/cat.svg" alt="chat" />
+      <img
+        class="img two"
+        src="../assets/images/basics/fuji.svg"
+        alt="mount fuji"
+      />
       <img
         class="img three"
-        src="../assets/images/ice-cream.svg"
+        src="../assets/images/basics/ice-cream.svg"
         alt="ice cream"
       />
     </div>
@@ -43,6 +47,7 @@ export default {
       // tween.duration(2);
       tween.seek(2.5);
       tween.play();
+      tween.reverse();
     }, 2000);
 
     gsap.registerEffect({
