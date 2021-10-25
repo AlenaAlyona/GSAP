@@ -29,7 +29,6 @@ export default {
   name: "Basics",
 
   mounted() {
-    // const img1 = document.querySelector(".img1");
     gsap.from(".img", {
       autoAlpha: 0,
       y: -100,
@@ -39,6 +38,11 @@ export default {
         each: 0.5,
         from: "center",
       },
+    });
+    gsap.to(".btn", {
+      duration: 0.5,
+      stagger: 0.2,
+      x: "random(-100, 100, 10)", // <- or you can add an arrays of values like so random([20, 80, -10, 50, -70])"
     });
   },
 };
