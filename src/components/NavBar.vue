@@ -106,8 +106,9 @@ export default {
 
 <style scoped>
 .navbar {
-  position: relative;
+  position: sticky;
   z-index: 1;
+  top: 0;
 }
 
 .menu-open {
