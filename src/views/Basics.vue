@@ -29,17 +29,16 @@ export default {
   name: "Basics",
 
   mounted() {
-    const img1 = document.querySelector(".img1");
-    gsap.from(img1, {
+    // const img1 = document.querySelector(".img1");
+    gsap.from("img", {
       autoAlpha: 0,
       y: -100,
-      rotation: 90,
-      ease: "bounce",
+      ease: "power4",
       duration: 2,
-      delay: 0.5,
-      repeat: -1, // <- repeats infinitely
-      repeatDelay: 0.2,
-      yoyo: true, // <- reverts animation
+      stagger: {
+        each: 0.5,
+        from: "center",
+      },
     });
   },
 };
