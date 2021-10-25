@@ -26,8 +26,8 @@
 .basics {
   background: #222;
   overflow: hidden;
-  height: 100vh;
-  padding-top: 20vh;
+  height: 90vh;
+  padding-top: 10vh;
 }
 
 .container-images {
