@@ -1,9 +1,13 @@
 <template>
   <div class="basics">
     <div class="container-images">
-      <img class="img" src="../assets/images/cat.svg" alt="chat" />
-      <img class="img" src="../assets/images/fuji.svg" alt="mount fuji" />
-      <img class="img" src="../assets/images/ice-cream.svg" alt="ice cream" />
+      <img class="img one" src="../assets/images/cat.svg" alt="chat" />
+      <img class="img two" src="../assets/images/fuji.svg" alt="mount fuji" />
+      <img
+        class="img three"
+        src="../assets/images/ice-cream.svg"
+        alt="ice cream"
+      />
     </div>
 
     <h1 class="title">Welcome to the sandbox.</h1>
@@ -29,15 +33,13 @@ export default {
   name: "Basics",
 
   mounted() {
-    gsap.from(".img", {
-      autoAlpha: 0,
-      y: -100,
-      ease: "power4",
-      duration: 2,
-      stagger: {
-        each: 0.5,
-        from: "center",
-      },
+    const imgOne = document.querySelector(".one");
+    gsap.to(imgOne, {
+      keyframes: [
+        { duration: 0.3, x: 100 },
+        { duration: 0.3, y: 100 },
+        { duration: 0.3, x: 200 },
+      ],
     });
     gsap.to(".btn", {
       duration: 0.5,
@@ -68,7 +70,7 @@ export default {
   height: auto;
   flex-shrink: 1;
   margin: 20px;
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 
 h1,
