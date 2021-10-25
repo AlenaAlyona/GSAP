@@ -1,17 +1,17 @@
 <template>
-  <div class="home">
-    <NavBar />
-  </div>
+  <div class="home"></div>
 </template>
 
 <script>
-// @ is an alias to /src
-import NavBar from "@/components/NavBar.vue";
-
 export default {
   name: "Home",
-  components: {
-    NavBar,
-  },
 };
 </script>
+
+<style scoped>
+.home {
+  background: #161616;
+  height: 100vh;
+}
+</style>
+>
