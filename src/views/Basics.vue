@@ -1,9 +1,9 @@
 <template>
   <div class="basics">
     <div class="container-images">
-      <img class="img1" src="../assets/images/cat.svg" alt="chat" />
-      <img class="img2" src="../assets/images/fuji.svg" alt="mount fuji" />
-      <img class="img3" src="../assets/images/ice-cream.svg" alt="ice cream" />
+      <img class="img" src="../assets/images/cat.svg" alt="chat" />
+      <img class="img" src="../assets/images/fuji.svg" alt="mount fuji" />
+      <img class="img" src="../assets/images/ice-cream.svg" alt="ice cream" />
     </div>
 
     <h1 class="title">Welcome to the sandbox.</h1>
@@ -11,14 +11,14 @@
 
     <!-- Stagger -->
 
-    <!-- <div class="container-btns">
+    <div class="container-btns">
       <button class="btn">CONFIRM</button>
       <button class="btn">CONFIRM</button>
       <button class="btn">CONFIRM</button>
       <button class="btn">CONFIRM</button>
       <button class="btn">CONFIRM</button>
       <button class="btn">CONFIRM</button>
-    </div>  -->
+    </div>
   </div>
 </template>
 
@@ -30,7 +30,7 @@ export default {
 
   mounted() {
     // const img1 = document.querySelector(".img1");
-    gsap.from("img", {
+    gsap.from(".img", {
       autoAlpha: 0,
       y: -100,
       ease: "power4",
@@ -59,14 +59,11 @@ export default {
   padding-top: 5vh;
 }
 
-img {
+.img {
   width: 20%;
   height: auto;
   flex-shrink: 1;
   margin: 20px;
-}
-
-.img {
   visibility: hidden;
 }
 
@@ -94,6 +91,7 @@ p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 5vh;
 }
 .container-btns button {
   padding: 10px 20px;
