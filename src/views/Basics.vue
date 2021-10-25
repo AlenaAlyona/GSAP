@@ -37,37 +37,35 @@ export default {
   name: "Basics",
 
   mounted() {
-    const imgOne = document.querySelector(".one");
-    const tween = gsap.to(".two", { y: 200, duration: 5, paused: true });
+    const TL = gsap.timeline({
+      defaults: { duration: 1, ease: "power4.out" },
+      repeat: -1,
+      yoyo: true,
+      paused: true,
+    });
+
+    TL.from(".one", { autoAlpha: 0, y: -50 });
+    TL.from(".two", { autoAlpha: 0, y: -50 });
+    TL.from(".three", { autoAlpha: 0, y: -50 });
+    TL.from(".title", { autoAlpha: 0, y: -50 }).add(() =>
+      console.log("END OF TIMELINE")
+    );
+    TL.from(".txt", { autoAlpha: 0, y: -50 });
+
+    //  TL.from(".two", { autoAlpha: 0, duration: 1, y: -50 }, "-=0.75");
+    // parameters can be:
+    // "-=0.75" or "+=0.75" - position parameter
+    // 3 - absolute parameter
+    // ">" or "<" signs
 
     setTimeout(() => {
-      // tween.resume();
-      // tween.kill();
-      // tween.delay(1);
-      // tween.duration(2);
-      tween.seek(2.5);
-      tween.play();
-      tween.reverse();
+      TL.restart();
     }, 2000);
 
-    gsap.registerEffect({
-      name: "imgAnimation",
-      effect: (targets, config) => {
-        return gsap.to(targets, {
-          duration: config.duration,
-          y: 200,
-          scale: 1.4,
-          rotation: 360,
-        });
-      },
-      defaults: { duration: 2 },
-    });
-    gsap.effects.imgAnimation(imgOne, { duration: 5 });
-    gsap.effects.imgAnimation(".three");
     gsap.to(".btn", {
       duration: 0.5,
       stagger: 0.2,
-      x: "random(-100, 100, 10)", // <- or you can add an arrays of values like so random([20, 80, -10, 50, -70])"
+      x: "random(-100, 100, 10)", // <- or you can add an arrays of values like so: random([20, 80, -10, 50, -70])"
     });
   },
 };
@@ -93,7 +91,7 @@ export default {
   height: auto;
   flex-shrink: 1;
   margin: 20px;
-  /* visibility: hidden; */
+  visibility: hidden;
 }
 
 h1,
@@ -101,6 +99,7 @@ p {
   text-align: center;
   color: #f1f1f1;
   line-height: 1.2;
+  visibility: hidden;
 }
 h1 {
   margin-top: 50px;
