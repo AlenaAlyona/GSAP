@@ -1,47 +1,51 @@
 <template>
-  <div class="menu-open">menu</div>
-  <div class="nav-container">
-    <div class="menu-close">close</div>
-    <nav class="menu">
-      <div class="menu-item">
-        <router-link to="/" class="menu-item-link">Home</router-link>
-        <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
-        <div class="marquee">
-          <div class="marquee-inner">
-            <span>{{ marqueeInnerText("Home") }}</span>
+  <div class="navbar">
+    <div class="menu-open">menu</div>
+    <div class="nav-container">
+      <div class="menu-close">close</div>
+      <nav class="menu">
+        <div class="menu-item">
+          <router-link to="/" class="menu-item-link">Home</router-link>
+          <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
+          <div class="marquee">
+            <div class="marquee-inner">
+              <span>{{ marqueeInnerText("Home") }}</span>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="menu-item">
-        <router-link to="/basics" class="menu-item-link"
-          >The Basics of GreenSock</router-link
-        >
-        <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
-        <div class="marquee">
-          <div class="marquee-inner">
-            <span>{{ marqueeInnerText("The Basics of GreenSock") }}</span>
+        <div class="menu-item">
+          <router-link to="/basics" class="menu-item-link"
+            >The Basics of GreenSock</router-link
+          >
+          <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
+          <div class="marquee">
+            <div class="marquee-inner">
+              <span>{{ marqueeInnerText("The Basics of GreenSock") }}</span>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="menu-item">
-        <router-link to="/" class="menu-item-link">Showcase Two</router-link>
-        <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
-        <div class="marquee">
-          <div class="marquee-inner">
-            <span>{{ marqueeInnerText("Showcase Two") }}</span>
+        <div class="menu-item">
+          <router-link to="/" class="menu-item-link">Showcase Two</router-link>
+          <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
+          <div class="marquee">
+            <div class="marquee-inner">
+              <span>{{ marqueeInnerText("Showcase Two") }}</span>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="menu-item">
-        <router-link to="/" class="menu-item-link">Showcase Three</router-link>
-        <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
-        <div class="marquee">
-          <div class="marquee-inner">
-            <span>{{ marqueeInnerText("Showcase Three") }}</span>
+        <div class="menu-item">
+          <router-link to="/" class="menu-item-link"
+            >Showcase Three</router-link
+          >
+          <img class="menu-item-img" src="@/assets/images/lain.jpeg" />
+          <div class="marquee">
+            <div class="marquee-inner">
+              <span>{{ marqueeInnerText("Showcase Three") }}</span>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </div>
 </template>
 
@@ -101,6 +105,11 @@ export default {
 </script>
 
 <style scoped>
+.navbar {
+  position: relative;
+  z-index: 1;
+}
+
 .menu-open {
   color: #fff;
 }
