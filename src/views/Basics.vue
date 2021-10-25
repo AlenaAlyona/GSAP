@@ -29,11 +29,14 @@ export default {
   name: "Basics",
 
   mounted() {
-    gsap.to(".img1", {
-      x: 100,
-      y: 100,
+    const img1 = document.querySelector(".img1");
+    // from method is good when you want to make a reaveal animation
+    gsap.from(img1, {
+      autoAlpha: 0,
       rotation: 45,
-      backgroundColor: "#fff",
+      scale: 0.5,
+      x: 100,
+      y: -100,
       duration: 2,
     });
   },
@@ -62,9 +65,9 @@ img {
   margin: 20px;
 }
 
-/* .img1, .img2, .img3 {
-    opacity: 0;
-}  */
+.img1 {
+  visibility: hidden;
+}
 
 h1,
 p {
