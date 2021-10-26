@@ -34,7 +34,7 @@
               <span>{{ marqueeInnerText("Greensock Projects") }}</span>
             </div>
           </div>
-          <ul v-if="visible" class="greensock-projects-list">
+          <ul v-show="visible" class="greensock-projects-list">
             <li class="menu-item">
               <router-link to="/reveal" class="menu-item-link" id="listed-item"
                 >Reveal animations project</router-link
