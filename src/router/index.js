@@ -12,6 +12,11 @@ const routes = [
     name: "Basics",
     component: () => import("../views/Basics.vue"),
   },
+  {
+    path: "/reveal",
+    name: "Reval",
+    component: () => import("../views/Reveal.vue"),
+  },
 ];
 
 const router = createRouter({
