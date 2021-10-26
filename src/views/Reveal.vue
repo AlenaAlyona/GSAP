@@ -48,7 +48,7 @@ export default {
 nav {
   position: absolute;
   top: 0;
-  z-index: 200;
+  z-index: 3;
   width: 100%;
   height: 70px;
   display: flex;
@@ -97,7 +97,7 @@ nav img {
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 100;
+  z-index: 1;
 }
 
 video {
@@ -115,7 +115,7 @@ video {
   position: relative;
   top: 150px;
   color: #fff;
-  z-index: 150;
+  z-index: 2;
 }
 .home-content h1 {
   font-family: Playfair Display, sans-serif;
