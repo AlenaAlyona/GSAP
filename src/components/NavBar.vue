@@ -139,7 +139,7 @@ export default {
 <style scoped>
 .navbar {
   position: sticky;
-  z-index: 1;
+  z-index: 2;
   top: 0;
 }
 
