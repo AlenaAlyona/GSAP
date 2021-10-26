@@ -4,14 +4,14 @@
       <img
         src="../assets/reveal/barrel.svg"
         alt="logo château"
-        class="logo barrel"
+        class="logo barrel nav-img"
       />
       <div class="container-nav">
         <a href="#">HOME</a>
         <a href="#">WINES</a>
         <a href="#">CONTACT</a>
       </div>
-      <img src="../assets/reveal/leaf.svg" alt="logo feuille" />
+      <img class="nav-img" src="../assets/reveal/leaf.svg" alt="logo feuille" />
     </nav>
 
     <div class="home">
@@ -20,9 +20,9 @@
         <source src="../assets/reveal/grappe-video.mp4" type="video/mp4" />
       </video>
       <div class="home-content">
-        <h1>Exceptional vineyards.</h1>
+        <h1 class="home-title">Exceptional vineyards.</h1>
         <div class="middle-line"></div>
-        <img src="../assets/reveal/grape.svg" alt="" />
+        <img class="home-content-img" src="../assets/reveal/grape.svg" alt="" />
         <button>DISCOVER</button>
       </div>
     </div>
@@ -30,12 +30,57 @@
 </template>
 
 <script>
-// import gsap from "gsap";
+import gsap from "gsap";
 
 export default {
   name: "Reveal",
 
-  mounted() {},
+  methods: {
+    revealAnimation(
+      title,
+      verticalLine,
+      grapesLogo,
+      homeBtn,
+      navLinks,
+      imgsNav
+    ) {
+      const TLFade = gsap.timeline({ paused: true });
+      TLFade.from(title, { autoAlpha: 0, y: -50, delay: 0.2 })
+        .to(verticalLine, { height: 150 }, "-=0.2")
+        .from(grapesLogo, { autoAlpha: 0, y: -50 }, "-=0.2")
+        .from(homeBtn, { autoAlpha: 0, y: -50 }, "-=0.2")
+        .from(
+          navLinks,
+          { autoAlpha: 0, y: -50, duration: 0.4, stagger: 0.1 },
+          "-=0.2"
+        )
+        .from(imgsNav, { autoAlpha: 0, y: -50 });
+
+      setTimeout(() => {
+        TLFade.restart();
+      }, 1500);
+    },
+  },
+
+  mounted() {
+    const navLinks = document.querySelectorAll(".container-nav a");
+    const imgsNav = document.querySelectorAll(".nav-img");
+    const title = document.querySelector(".home-title");
+    const verticalLine = document.querySelector(".middle-line");
+    const grapesLogo = document.querySelector(".home-content-img");
+    const homeBtn = document.querySelector(".home-content button");
+    window.addEventListener(
+      "load",
+      this.revealAnimation(
+        title,
+        verticalLine,
+        grapesLogo,
+        homeBtn,
+        navLinks,
+        imgsNav
+      )
+    );
+  },
 };
 </script>
 
@@ -111,9 +156,9 @@ video {
 
 .home-content {
   width: 600px;
-  margin: 0 auto;
+  margin: auto;
   position: relative;
-  top: 150px;
+  top: 10vh;
   color: #fff;
   z-index: 2;
 }
@@ -121,8 +166,7 @@ video {
   font-family: Playfair Display, sans-serif;
   text-align: center;
   text-transform: uppercase;
-  font-size: 85px;
-  /* font-weight: bolder; */
+  font-size: 50px;
   line-height: 1.1;
   visibility: hidden;
 }
