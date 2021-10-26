@@ -39,7 +39,7 @@
               <router-link to="/reveal" class="menu-item-link" id="listed-item"
                 >Reveal animations project</router-link
               >
-              <img class="menu-item-img" src="@/assets/navigation/lain.jpeg" />
+              <img class="menu-item-img" src="@/assets/navigation/reveal.png" />
               <div class="marquee">
                 <div class="marquee-inner">
                   <span>{{
