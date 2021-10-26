@@ -1,15 +1,11 @@
 <template>
   <div class="basics">
     <div class="container-images">
-      <img class="img one" src="../assets/images/basics/cat.svg" alt="chat" />
-      <img
-        class="img two"
-        src="../assets/images/basics/fuji.svg"
-        alt="mount fuji"
-      />
+      <img class="img one" src="../assets/basics/cat.svg" alt="chat" />
+      <img class="img two" src="../assets/basics/fuji.svg" alt="mount fuji" />
       <img
         class="img three"
-        src="../assets/images/basics/ice-cream.svg"
+        src="../assets/basics/ice-cream.svg"
         alt="ice cream"
       />
     </div>

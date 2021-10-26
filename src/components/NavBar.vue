@@ -6,10 +6,7 @@
       <nav class="menu">
         <div class="menu-item">
           <router-link to="/" class="menu-item-link">Home</router-link>
-          <img
-            class="menu-item-img"
-            src="@/assets/images/navigation/lain.jpeg"
-          />
+          <img class="menu-item-img" src="@/assets/navigation/lain.jpeg" />
           <div class="marquee">
             <div class="marquee-inner">
               <span>{{ marqueeInnerText("Home") }}</span>
@@ -20,10 +17,7 @@
           <router-link to="/basics" class="menu-item-link"
             >The Basics of GreenSock</router-link
           >
-          <img
-            class="menu-item-img"
-            src="@/assets/images/navigation/basics.png"
-          />
+          <img class="menu-item-img" src="@/assets/navigation/basics.png" />
           <div class="marquee">
             <div class="marquee-inner">
               <span>{{ marqueeInnerText("The Basics of GreenSock") }}</span>
@@ -34,10 +28,7 @@
           <a to="/" @click="switchVisibility" class="menu-item-link-non-closing"
             >Greensock Projects</a
           >
-          <img
-            class="menu-item-img"
-            src="@/assets/images/navigation/lain.jpeg"
-          />
+          <img class="menu-item-img" src="@/assets/navigation/lain.jpeg" />
           <div class="marquee">
             <div class="marquee-inner">
               <span>{{ marqueeInnerText("Greensock Projects") }}</span>
@@ -48,10 +39,7 @@
               <router-link to="/reveal" class="menu-item-link" id="listed-item"
                 >Reveal animations project</router-link
               >
-              <img
-                class="menu-item-img"
-                src="@/assets/images/navigation/lain.jpeg"
-              />
+              <img class="menu-item-img" src="@/assets/navigation/lain.jpeg" />
               <div class="marquee">
                 <div class="marquee-inner">
                   <span>{{
@@ -66,10 +54,7 @@
           <router-link to="/" class="menu-item-link"
             >Showcase Three</router-link
           >
-          <img
-            class="menu-item-img"
-            src="@/assets/images/navigation/lain.jpeg"
-          />
+          <img class="menu-item-img" src="@/assets/navigation/lain.jpeg" />
           <div class="marquee">
             <div class="marquee-inner">
               <span>{{ marqueeInnerText("Showcase Three") }}</span>
