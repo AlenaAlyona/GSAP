@@ -37,14 +37,23 @@
           <ul v-show="visible" class="greensock-projects-list">
             <li class="menu-item">
               <router-link to="/reveal" class="menu-item-link" id="listed-item"
-                >Reveal animations project</router-link
+                >Reveal animations</router-link
               >
               <img class="menu-item-img" src="@/assets/navigation/reveal.png" />
               <div class="marquee">
                 <div class="marquee-inner">
-                  <span>{{
-                    marqueeInnerText("Reveal animations project")
-                  }}</span>
+                  <span>{{ marqueeInnerText("Reveal animations") }}</span>
+                </div>
+              </div>
+            </li>
+            <li class="menu-item">
+              <router-link to="/loader" class="menu-item-link" id="listed-item"
+                >Restaurant Loader</router-link
+              >
+              <img class="menu-item-img" src="@/assets/navigation/lain.jpeg" />
+              <div class="marquee">
+                <div class="marquee-inner">
+                  <span>{{ marqueeInnerText("Restaurant Loader") }}</span>
                 </div>
               </div>
             </li>
@@ -139,7 +148,7 @@ export default {
 <style scoped>
 .navbar {
   position: sticky;
-  z-index: 4;
+  z-index: 5;
   top: 0;
 }
 
