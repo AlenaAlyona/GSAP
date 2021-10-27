@@ -207,7 +207,7 @@ video {
   line-height: 1.1;
 }
 .loader-home-content .loader-middle-line {
-  height: 200px;
+  height: 150px;
   width: 2px;
   background: #fff;
   margin: 40px auto;
