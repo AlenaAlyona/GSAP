@@ -15,7 +15,6 @@ what already have been done:<br/>
 
 what needs to be done:
 
-- add <em>Back</em> button<br/>
 - add distinctive style to current selected item<br/>
 - fix `menu-item-img` responsiveness<br/>
 
