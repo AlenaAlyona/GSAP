@@ -167,6 +167,7 @@ export default {
 .loader-home {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .loader-overlay {
@@ -194,7 +195,7 @@ video {
   max-width: 600px;
   margin: 0 auto;
   position: relative;
-  top: 150px;
+  top: 10vh;
   color: #fff;
   z-index: 2;
 }
@@ -203,7 +204,6 @@ video {
   text-align: center;
   text-transform: uppercase;
   font-size: clamp(40px, 7vw, 85px);
-  /* font-weight: bolder; */
   line-height: 1.1;
 }
 .loader-home-content .loader-middle-line {
