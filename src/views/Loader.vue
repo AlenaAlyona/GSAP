@@ -29,12 +29,47 @@
 </template>
 
 <script>
-// import gsap from "gsap";
+import gsap from "gsap";
 
 export default {
   name: "Loader",
 
-  mounted() {},
+  methods: {
+    loader() {
+      const TLLoad = gsap.timeline({
+        default: {
+          ease: "power2",
+        },
+        paused: true,
+      });
+
+      TLLoad.to(".loader-images-container", {
+        height: 400,
+        duration: 1.3,
+        delay: 0.4,
+      })
+        .to(".loader-bloc-txt", { height: "auto", duration: 0.6 }, "-=0.8")
+        .to(".loader-bloc-txt h2", { y: 0 }, "-=0.6")
+        .to(".f2", { y: 0, duration: 0.6 })
+        .to(".flip-img1", { display: "none", duration: 0 })
+        .to(".f2", { y: "-100%" })
+        .to(".loader-container", { autoAlpha: 0, duration: 0.8, delay: 0.7 })
+        .add(() => {
+          document.querySelector("video").play();
+        }, "-=0.8")
+        .add(() => {
+          document.querySelector(".loader-container").style.display = "none";
+        });
+
+      setTimeout(() => {
+        TLLoad.restart();
+      }, 1500);
+    },
+  },
+
+  mounted() {
+    window.addEventListener("load", this.loader());
+  },
 };
 </script>
 
