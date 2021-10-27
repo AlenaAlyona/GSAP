@@ -17,6 +17,11 @@ const routes = [
     name: "Reval",
     component: () => import("../views/Reveal.vue"),
   },
+  {
+    path: "/loader",
+    name: "Loader",
+    component: () => import("../views/Loader.vue"),
+  },
 ];
 
 const router = createRouter({
