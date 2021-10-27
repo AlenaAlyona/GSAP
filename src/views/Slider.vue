@@ -146,7 +146,7 @@ export default {
   right: 0;
   width: 45px;
   height: 45px;
-  background: #fdf9f6;
+  background: rgba(253, 249, 246, 0.2);
   color: #222;
   display: flex;
   justify-content: center;
