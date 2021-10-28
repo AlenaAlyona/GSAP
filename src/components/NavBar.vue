@@ -5,7 +5,9 @@
       <div class="menu-close">close</div>
       <nav class="menu">
         <div class="menu-item">
-          <router-link to="/" class="menu-item-link">Home</router-link>
+          <router-link to="/" class="menu-item-link" @click="switchVisibility"
+            >Home</router-link
+          >
           <img class="menu-item-img" src="@/assets/navigation/lain.jpeg" />
           <div class="marquee">
             <div class="marquee-inner">
@@ -14,61 +16,141 @@
           </div>
         </div>
         <div class="menu-item">
-          <router-link to="/basics" class="menu-item-link"
-            >The Basics of GreenSock</router-link
-          >
-          <img class="menu-item-img" src="@/assets/navigation/basics.png" />
-          <div class="marquee">
-            <div class="marquee-inner">
-              <span>{{ marqueeInnerText("The Basics of GreenSock") }}</span>
-            </div>
-          </div>
-        </div>
-        <div class="menu-item">
-          <a to="/" @click="switchVisibility" class="menu-item-link-non-closing"
-            >Greensock Projects</a
+          <a
+            @click="switchVisibility"
+            class="menu-item-link-non-closing"
+            :class="[basicsLink ? 'active-link' : '']"
+            >The Basics of Greensock</a
           >
           <img class="menu-item-img" src="@/assets/navigation/lain.jpeg" />
           <div class="marquee">
             <div class="marquee-inner">
-              <span>{{ marqueeInnerText("Greensock Projects") }}</span>
+              <span>{{ marqueeInnerText("The Basics of Greensock") }}</span>
             </div>
           </div>
           <ul v-show="visible" class="greensock-projects-list">
             <li class="menu-item">
-              <router-link to="/reveal" class="menu-item-link" id="listed-item"
-                >Reveal animations</router-link
+              <router-link
+                to="/reveal"
+                class="basics menu-item-link"
+                id="listed-item"
+                >Reveal animation</router-link
               >
               <img class="menu-item-img" src="@/assets/navigation/reveal.png" />
               <div class="marquee">
                 <div class="marquee-inner">
-                  <span>{{ marqueeInnerText("Reveal animations") }}</span>
+                  <span>{{ marqueeInnerText("Reveal animation") }}</span>
                 </div>
               </div>
             </li>
             <li class="menu-item">
-              <router-link to="/loader" class="menu-item-link" id="listed-item"
-                >Restaurant Loader</router-link
+              <router-link
+                to="/loader"
+                class="basics menu-item-link"
+                id="listed-item"
+                >Loading animation</router-link
               >
-              <img class="menu-item-img" src="@/assets/navigation/lain.jpeg" />
+              <img class="menu-item-img" src="@/assets/navigation/loader.png" />
               <div class="marquee">
                 <div class="marquee-inner">
-                  <span>{{ marqueeInnerText("Restaurant Loader") }}</span>
+                  <span>{{ marqueeInnerText("Loading animation") }}</span>
+                </div>
+              </div>
+            </li>
+            <li class="menu-item">
+              <router-link
+                to="/countdown"
+                class="basics menu-item-link"
+                id="listed-item"
+                >Countdown animation</router-link
+              >
+              <img
+                class="menu-item-img"
+                src="@/assets/navigation/countdown.png"
+              />
+              <div class="marquee">
+                <div class="marquee-inner">
+                  <span>{{ marqueeInnerText("Countdown animation") }}</span>
+                </div>
+              </div>
+            </li>
+            <li class="menu-item">
+              <router-link
+                to="/slider"
+                class="basics menu-item-link"
+                id="listed-item"
+                >Horizontal slider animation</router-link
+              >
+              <img class="menu-item-img" src="@/assets/navigation/slider.png" />
+              <div class="marquee">
+                <div class="marquee-inner">
+                  <span>{{
+                    marqueeInnerText("Horizontal slider animation")
+                  }}</span>
                 </div>
               </div>
             </li>
           </ul>
         </div>
         <div class="menu-item">
-          <router-link to="/" class="menu-item-link"
-            >Showcase Three</router-link
+          <a to="/" @click="switchVisibility" class="menu-item-link-non-closing"
+            >Scroll Animation</a
           >
           <img class="menu-item-img" src="@/assets/navigation/lain.jpeg" />
           <div class="marquee">
             <div class="marquee-inner">
-              <span>{{ marqueeInnerText("Showcase Three") }}</span>
+              <span>{{ marqueeInnerText("Scroll Animation") }}</span>
             </div>
           </div>
+          <ul v-show="visible" class="greensock-projects-list">
+            <li class="menu-item">
+              <router-link to="/reveal" class="menu-item-link" id="listed-item"
+                >Empty slot</router-link
+              >
+              <img class="menu-item-img" src="@/assets/navigation/lain.jpeg" />
+              <div class="marquee">
+                <div class="marquee-inner">
+                  <span>{{ marqueeInnerText("Empty slot") }}</span>
+                </div>
+              </div>
+            </li>
+            <li class="menu-item">
+              <router-link to="/loader" class="menu-item-link" id="listed-item"
+                >Empty slot</router-link
+              >
+              <img class="menu-item-img" src="@/assets/navigation/lain.jpeg" />
+              <div class="marquee">
+                <div class="marquee-inner">
+                  <span>{{ marqueeInnerText("Empty slot") }}</span>
+                </div>
+              </div>
+            </li>
+            <li class="menu-item">
+              <router-link
+                to="/countdown"
+                class="menu-item-link"
+                id="listed-item"
+                >Empty slot</router-link
+              >
+              <img class="menu-item-img" src="@/assets/navigation/lain.jpeg" />
+              <div class="marquee">
+                <div class="marquee-inner">
+                  <span>{{ marqueeInnerText("Vertical Countdown") }}</span>
+                </div>
+              </div>
+            </li>
+            <li class="menu-item">
+              <router-link to="/slider" class="menu-item-link" id="listed-item"
+                >Empty slot</router-link
+              >
+              <img class="menu-item-img" src="@/assets/navigation/lain.jpeg" />
+              <div class="marquee">
+                <div class="marquee-inner">
+                  <span>{{ marqueeInnerText("Empty slot") }}</span>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </nav>
     </div>
@@ -84,6 +166,7 @@ export default {
   data() {
     return {
       visible: false,
+      basicsLink: false,
     };
   },
 
@@ -99,6 +182,11 @@ export default {
         return (this.visible = !this.visible);
       }
       return (this.visible = false);
+    },
+    isLinkActiveBasics() {
+      this.basicsLink = Array.from(
+        document.getElementsByClassName("basics")
+      ).some((el) => el.classList.contains("router-link-active"));
     },
   },
 
@@ -122,6 +210,7 @@ export default {
     document
       .getElementsByClassName("menu-open")[0]
       .addEventListener("click", (e) => {
+        this.isLinkActiveBasics();
         t1.reversed(!t1.reversed());
         this.$emit("click", e);
       });
@@ -129,6 +218,7 @@ export default {
     document
       .getElementsByClassName("menu-close")[0]
       .addEventListener("click", (e) => {
+        this.isLinkActiveBasics();
         t1.reversed(!t1.reversed());
         this.$emit("click", e);
       });
@@ -136,6 +226,7 @@ export default {
     Array.from(document.getElementsByClassName("menu-item-link")).forEach(
       (el) => {
         el.addEventListener("click", (e) => {
+          this.isLinkActiveBasics();
           t1.reversed(!t1.reversed());
           this.$emit("click", e);
         });
@@ -150,6 +241,12 @@ export default {
   position: sticky;
   z-index: 5;
   top: 0;
+}
+
+.router-link-active,
+.active-link {
+  text-decoration: underline !important;
+  text-decoration-style: dashed !important;
 }
 
 .menu-open {

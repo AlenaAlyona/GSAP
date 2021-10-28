@@ -11,11 +11,11 @@ what already have been done:<br/>
 :white_check_mark: replace anchor tags with router-link<br/>
 :white_check_mark: add computed property for displaying marquee<br/>
 :white_check_mark: add animation to every item of navbar => when user clicks on any item of navbar, navbar closes (before it worked only when user clicked on "menu" and "close")<br/>
-:white_check_mark: show list of projects when user clicks on Greensock Projects<br/>
+:white_check_mark: show list of projects when user clicks on The Basics of Greensock<br/>
+:white_check_mark: add distinctive style to current selected item<br/>
 
 what needs to be done:
 
-- add distinctive style to current selected item<br/>
 - fix `menu-item-img` responsiveness<br/>
 
 ## Project setup
