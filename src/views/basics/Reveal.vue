@@ -2,7 +2,7 @@
   <div class="reveal-project">
     <nav>
       <img
-        src="@/assets/reveal/barrel.svg"
+        src="@/assets/basics/reveal/barrel.svg"
         alt="logo château"
         class="logo barrel nav-img"
       />
@@ -11,18 +11,29 @@
         <a href="#">WINES</a>
         <a href="#">CONTACT</a>
       </div>
-      <img class="nav-img" src="@/assets/reveal/leaf.svg" alt="logo feuille" />
+      <img
+        class="nav-img"
+        src="@/assets/basics/reveal/leaf.svg"
+        alt="logo feuille"
+      />
     </nav>
 
     <div class="home">
       <div class="overlay"></div>
       <video autoplay muted loop>
-        <source src="@/assets/reveal/grappe-video.mp4" type="video/mp4" />
+        <source
+          src="@/assets/basics/reveal/grappe-video.mp4"
+          type="video/mp4"
+        />
       </video>
       <div class="home-content">
         <h1 class="home-title">Exceptional vineyards.</h1>
         <div class="middle-line"></div>
-        <img class="home-content-img" src="@/assets/reveal/grape.svg" alt="" />
+        <img
+          class="home-content-img"
+          src="@/assets/basics/reveal/grape.svg"
+          alt=""
+        />
         <button>DISCOVER</button>
       </div>
     </div>

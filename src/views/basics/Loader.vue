@@ -17,7 +17,10 @@
     <div class="loader-home">
       <div class="loader-overlay"></div>
       <video muted loop>
-        <source src="@/assets/loader/highendcooking.mp4" type="video/mp4" />
+        <source
+          src="@/assets/basics/loader/highendcooking.mp4"
+          type="video/mp4"
+        />
       </video>
       <div class="loader-home-content">
         <h1>ADAMO EXPERIENCE.</h1>
@@ -135,10 +138,10 @@ export default {
 }
 
 .flip-img1 {
-  background-image: url(../../assets/loader/image3.png);
+  background-image: url(../../assets/basics/loader/image3.png);
 }
 .flip-img2 {
-  background-image: url(../../assets/loader/image1.jpg);
+  background-image: url(../../assets/basics/loader/image1.jpg);
 }
 
 .flip {
