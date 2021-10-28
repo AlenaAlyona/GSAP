@@ -135,10 +135,10 @@ export default {
 }
 
 .flip-img1 {
-  background-image: url(../assets/loader/image3.png);
+  background-image: url(../../assets/loader/image3.png);
 }
 .flip-img2 {
-  background-image: url(../assets/loader/image1.jpg);
+  background-image: url(../../assets/loader/image1.jpg);
 }
 
 .flip {

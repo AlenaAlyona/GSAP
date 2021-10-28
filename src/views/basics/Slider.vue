@@ -8,10 +8,10 @@
       <div class="slider-container">
         <div class="slider-container-btns">
           <button class="slider-btn-prev">
-            <img src="../assets/slider/left-chevron.svg" alt="left chevron" />
+            <img src="@/assets/slider/left-chevron.svg" alt="left chevron" />
           </button>
           <button class="slider-btn-next">
-            <img src="../assets/slider/right-chevron.svg" alt="right chevron" />
+            <img src="@/assets/slider/right-chevron.svg" alt="right chevron" />
           </button>
         </div>
         <div class="slider-slide s1">
@@ -227,12 +227,12 @@ export default {
   padding-left: 20px;
 }
 .s1 {
-  background-image: url(../assets/slider/forest1.jpg);
+  background-image: url(../../assets/slider/forest1.jpg);
 }
 .s2 {
-  background-image: url(../assets/slider/forest2.jpg);
+  background-image: url(../../assets/slider/forest2.jpg);
 }
 .s3 {
-  background-image: url(../assets/slider/forest3.jpg);
+  background-image: url(../../assets/slider/forest3.jpg);
 }
 </style>
