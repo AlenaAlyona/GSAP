@@ -8,14 +8,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "Image",
-
-  mounted() {},
-};
-</script>
-
 <style scoped>
 .image-box {
   position: relative;
