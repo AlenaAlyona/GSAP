@@ -22,7 +22,7 @@
             :class="[basicsLink ? 'active-link' : '']"
             >The Basics of Greensock</a
           >
-          <img class="menu-item-img" src="@/assets/navigation/lain.jpeg" />
+          <img class="menu-item-img" src="@/assets/navigation/greensock.png" />
           <div class="marquee">
             <div class="marquee-inner">
               <span>{{ marqueeInnerText("The Basics of Greensock") }}</span>
@@ -96,7 +96,10 @@
           <a to="/" @click="switchVisibility" class="menu-item-link-non-closing"
             >Scroll Animation</a
           >
-          <img class="menu-item-img" src="@/assets/navigation/lain.jpeg" />
+          <img
+            class="menu-item-img"
+            src="@/assets/navigation/scrolltrigger.png"
+          />
           <div class="marquee">
             <div class="marquee-inner">
               <span>{{ marqueeInnerText("Scroll Animation") }}</span>
@@ -104,49 +107,56 @@
           </div>
           <ul v-show="visible" class="greensock-projects-list">
             <li class="menu-item">
-              <router-link to="/reveal" class="menu-item-link" id="listed-item"
-                >Empty slot</router-link
-              >
-              <img class="menu-item-img" src="@/assets/navigation/lain.jpeg" />
-              <div class="marquee">
-                <div class="marquee-inner">
-                  <span>{{ marqueeInnerText("Empty slot") }}</span>
-                </div>
-              </div>
-            </li>
-            <li class="menu-item">
-              <router-link to="/loader" class="menu-item-link" id="listed-item"
-                >Empty slot</router-link
-              >
-              <img class="menu-item-img" src="@/assets/navigation/lain.jpeg" />
-              <div class="marquee">
-                <div class="marquee-inner">
-                  <span>{{ marqueeInnerText("Empty slot") }}</span>
-                </div>
-              </div>
-            </li>
-            <li class="menu-item">
               <router-link
-                to="/countdown"
+                to="/multiple"
                 class="menu-item-link"
                 id="listed-item"
-                >Empty slot</router-link
+                >Multiple scroll animation</router-link
               >
-              <img class="menu-item-img" src="@/assets/navigation/lain.jpeg" />
+              <img
+                class="menu-item-img"
+                src="@/assets/navigation/multiple.png"
+              />
               <div class="marquee">
                 <div class="marquee-inner">
-                  <span>{{ marqueeInnerText("Vertical Countdown") }}</span>
+                  <span>{{
+                    marqueeInnerText("Multiple scroll animation")
+                  }}</span>
                 </div>
               </div>
             </li>
             <li class="menu-item">
-              <router-link to="/slider" class="menu-item-link" id="listed-item"
-                >Empty slot</router-link
+              <router-link to="/pin" class="menu-item-link" id="listed-item"
+                >Scroll with pin animation</router-link
               >
-              <img class="menu-item-img" src="@/assets/navigation/lain.jpeg" />
+              <img class="menu-item-img" src="@/assets/navigation/pin.png" />
               <div class="marquee">
                 <div class="marquee-inner">
-                  <span>{{ marqueeInnerText("Empty slot") }}</span>
+                  <span>{{
+                    marqueeInnerText("Scroll with pin animation")
+                  }}</span>
+                </div>
+              </div>
+            </li>
+            <li class="menu-item">
+              <router-link to="/rocket" class="menu-item-link" id="listed-item"
+                >Scroll Rocket</router-link
+              >
+              <img class="menu-item-img" src="@/assets/navigation/rocket.png" />
+              <div class="marquee">
+                <div class="marquee-inner">
+                  <span>{{ marqueeInnerText("Scroll Rocket") }}</span>
+                </div>
+              </div>
+            </li>
+            <li class="menu-item">
+              <router-link to="/image" class="menu-item-link" id="listed-item"
+                >CSS scrollable image</router-link
+              >
+              <img class="menu-item-img" src="@/assets/navigation/image.png" />
+              <div class="marquee">
+                <div class="marquee-inner">
+                  <span>{{ marqueeInnerText("CSS scrollable image") }}</span>
                 </div>
               </div>
             </li>
