@@ -8,7 +8,7 @@
           <router-link to="/" class="menu-item-link" @click="closeAll"
             >Home</router-link
           >
-          <img class="menu-item-img" src="@/assets/navigation/lain.jpeg" />
+          <img class="menu-item-img" src="@/assets/navigation/home.png" />
           <div class="marquee">
             <div class="marquee-inner">
               <span>{{ marqueeInnerText("Home") }}</span>
