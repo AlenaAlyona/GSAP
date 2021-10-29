@@ -8,19 +8,44 @@ const routes = [
     component: Home,
   },
   {
-    path: "/basics",
-    name: "Basics",
-    component: () => import("../views/Basics.vue"),
-  },
-  {
     path: "/reveal",
     name: "Reval",
-    component: () => import("../views/Reveal.vue"),
+    component: () => import("../views/basics/Reveal.vue"),
   },
   {
     path: "/loader",
     name: "Loader",
-    component: () => import("../views/Loader.vue"),
+    component: () => import("../views/basics/Loader.vue"),
+  },
+  {
+    path: "/countdown",
+    name: "Countdown",
+    component: () => import("../views/basics/Countdown.vue"),
+  },
+  {
+    path: "/slider",
+    name: "Slider",
+    component: () => import("../views/basics/Slider.vue"),
+  },
+  {
+    path: "/multiple",
+    name: "Multiple",
+    component: () => import("../views/scroll/Multiple.vue"),
+  },
+  {
+    path: "/pin",
+    name: "Pin",
+    component: () => import("../views/scroll/Pin.vue"),
+  },
+  {
+    path: "/rocket",
+    name: "Rocket",
+    component: () => import("../views/scroll/Rocket.vue"),
+  },
+  {
+    path: "/image",
+    name: "Image",
+    component: () => import("../views/scroll/Image.vue"),
   },
 ];
 
