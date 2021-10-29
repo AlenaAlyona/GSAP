@@ -155,7 +155,6 @@ export default {
     const sections = document.querySelectorAll(".pin-section");
 
     sections.forEach((section, index) => {
-      console.log(index);
       ScrollTrigger.create({
         trigger: section,
         start: "top center",
