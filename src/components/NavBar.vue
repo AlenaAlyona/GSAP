@@ -5,7 +5,7 @@
       <div class="menu-close">close</div>
       <nav class="menu">
         <div class="menu-item">
-          <router-link to="/" class="menu-item-link" @click="switchVisibility"
+          <router-link to="/" class="menu-item-link" @click="closeAll"
             >Home</router-link
           >
           <img class="menu-item-img" src="@/assets/navigation/lain.jpeg" />
@@ -17,7 +17,7 @@
         </div>
         <div class="menu-item">
           <a
-            @click="switchVisibility"
+            @click="switchBasicsVisibility"
             class="menu-item-link-non-closing"
             :class="[basicsLink ? 'active-link' : '']"
             >The Basics of Greensock</a
@@ -28,7 +28,7 @@
               <span>{{ marqueeInnerText("The Basics of Greensock") }}</span>
             </div>
           </div>
-          <ul v-show="visible" class="greensock-projects-list">
+          <ul v-show="basicsVisible" class="greensock-projects-list">
             <li class="menu-item">
               <router-link
                 to="/reveal"
@@ -93,7 +93,10 @@
           </ul>
         </div>
         <div class="menu-item">
-          <a to="/" @click="switchVisibility" class="menu-item-link-non-closing"
+          <a
+            to="/"
+            @click="switchScrollVisibility"
+            class="menu-item-link-non-closing"
             >Scroll Animation</a
           >
           <img
@@ -105,7 +108,7 @@
               <span>{{ marqueeInnerText("Scroll Animation") }}</span>
             </div>
           </div>
-          <ul v-show="visible" class="greensock-projects-list">
+          <ul v-show="scrollVisible" class="greensock-projects-list">
             <li class="menu-item">
               <router-link
                 to="/multiple"
@@ -175,7 +178,8 @@ export default {
 
   data() {
     return {
-      visible: false,
+      basicsVisible: false,
+      scrollVisible: false,
       basicsLink: false,
     };
   },
@@ -187,11 +191,15 @@ export default {
   },
 
   methods: {
-    switchVisibility() {
-      if (!this.visible) {
-        return (this.visible = !this.visible);
-      }
-      return (this.visible = false);
+    switchBasicsVisibility() {
+      return (this.basicsVisible = !this.basicsVisible);
+    },
+    switchScrollVisibility() {
+      return (this.scrollVisible = !this.scrollVisible);
+    },
+    closeAll() {
+      this.basicsVisible = false;
+      this.scrollVisible = false;
     },
     isLinkActiveBasics() {
       this.basicsLink = Array.from(
