@@ -431,4 +431,22 @@ export default {
 .marquee span {
   font-style: italic;
 }
+
+@media (max-width: 680px) {
+  .menu-item-img {
+    height: 10vh;
+  }
+}
+
+@media (max-width: 500px) {
+  .menu-item-img {
+    height: 8vh;
+  }
+}
+
+@media (max-width: 375px) {
+  .menu-item-img {
+    height: 6vh;
+  }
+}
 </style>
