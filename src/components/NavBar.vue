@@ -370,7 +370,6 @@ export default {
   max-height: 600px;
   opacity: 0;
   left: 8%;
-  top: 10%;
   transform: scale(0);
 }
 
