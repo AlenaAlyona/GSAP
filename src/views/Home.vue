@@ -4,8 +4,8 @@
       href="https://github.com/AlenaAlyona"
       target="_blank"
       class="home-link github"
-      >github</a
-    >
+      ><span>github</span><span class="home-link-underline"></span
+    ></a>
     <img
       src="@/assets/home/github.jpeg"
       class="home-img"
@@ -15,14 +15,61 @@
       href="https://www.linkedin.com/in/alena-izakson/"
       target="_blank"
       class="home-link"
-      >linkedin</a
-    >
+      ><span>linkedin</span><span class="home-link-underline"></span
+    ></a>
   </div>
 </template>
 
 <script>
+import gsap from "gsap";
+
 export default {
   name: "Home",
+
+  mounted() {
+    const workLinks = document.querySelectorAll(".home-link");
+
+    workLinks.forEach((link) => {
+      const underline = link.querySelector(".home-link-underline");
+      link.TL = gsap.timeline({ paused: true });
+
+      link.TL.fromTo(
+        underline,
+        {
+          width: "0%",
+          left: "0%",
+        },
+        {
+          width: "100%",
+          duration: 1,
+        }
+      );
+
+      link.TL.add("midway");
+
+      link.TL.fromTo(
+        underline,
+        {
+          width: "100%",
+          left: "0%",
+        },
+        {
+          width: "0%",
+          left: "100%",
+          duration: 1,
+          immediateRender: false,
+        }
+      );
+
+      link.addEventListener("mouseenter", () => {
+        link.TL.tweenFromTo(0, "midway");
+      });
+
+      link.addEventListener("mouseleave", () => {
+        link.TL.play();
+      });
+    });
+  },
 };
 </script>
 
@@ -40,10 +87,21 @@ export default {
 .home-link {
   text-decoration: none;
   text-transform: uppercase;
+  position: relative;
   color: #fff;
   font-size: 50px;
   padding: 10px;
   z-index: 2;
+}
+
+.home-link-underline {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: calc(1px + 0.6vw);
+  background-color: #fff;
 }
 
 .home-img {
