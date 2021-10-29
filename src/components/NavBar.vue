@@ -5,7 +5,11 @@
       <div class="menu-close">close</div>
       <nav class="menu">
         <div class="menu-item">
-          <router-link to="/" class="menu-item-link" @click="closeAll"
+          <router-link
+            id="home-nav-link"
+            to="/"
+            class="menu-item-link"
+            @click="closeAll"
             >Home</router-link
           >
           <img class="menu-item-img" src="@/assets/navigation/home.png" />
@@ -282,6 +286,10 @@ export default {
 
 .router-link-active,
 .active-section-link {
+  text-decoration: underline !important;
+}
+
+#home-nav-link.router-link-active {
   text-decoration: underline !important;
 }
 
