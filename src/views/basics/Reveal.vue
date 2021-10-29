@@ -142,6 +142,7 @@ nav img {
 .home {
   width: 100%;
   height: 100%;
+  position: fixed;
 }
 
 .overlay {
@@ -166,12 +167,15 @@ video {
 }
 
 .home-content {
-  width: 600px;
   margin: auto;
   position: relative;
-  top: 10vh;
   color: #fff;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 70px;
 }
 .home-content h1 {
   font-family: Playfair Display, sans-serif;
