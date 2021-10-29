@@ -16,11 +16,11 @@ what have been done navbar-wise:<br/>
 :white_check_mark: show list of projects when user clicks on The Basics of Greensock and Scroll Animation<br/>
 :white_check_mark: add distinctive style to current selected item<br/>
 :white_check_mark: conditionally display Basics and Scroll sections lists<br/>
-:white_check_mark: close all lists when user clicks on Home
+:white_check_mark: close all lists when user clicks on Home<br/>
 :white_check_mark: fix `menu-item-img` position for anchor tags<br/>
 :white_check_mark: fix `menu-item-img` responsiveness<br/>
 
-improvements/additions for course code:
+improvements/additions for course code:<br/>
 :white_check_mark: fix Reveal view responsiveness<br/>
 :white_check_mark: CSS tweaks<br/>
 :white_check_mark: update Home view conten by:<br/>
