@@ -237,8 +237,8 @@ export default {
 
 .pin-tooltip {
   background: #fff;
-  width: 155px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -250,13 +250,13 @@ export default {
   text-transform: uppercase;
 }
 .pin-tooltip img {
-  width: 50%;
+  width: 50px;
   object-fit: cover;
   object-position: center;
   margin-bottom: 5px;
 }
 
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 1200px) {
   .pin-content {
     padding: 20px 10px;
     max-width: 100%;
