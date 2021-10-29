@@ -133,7 +133,7 @@
                 </div>
               </div>
             </li>
-            <li class="menu-item">
+            <li v-if="false" class="menu-item">
               <router-link
                 to="/pin"
                 class="scroll menu-item-link"
