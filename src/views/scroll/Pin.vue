@@ -207,10 +207,16 @@ export default {
   padding-bottom: 100px;
 }
 
+.pin-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .pin-content {
   padding: 20px 10px;
-  max-width: 700px;
-  margin: 0 auto;
+  max-width: 600px;
 }
 
 .pin-content h2 {
@@ -237,8 +243,8 @@ export default {
 
 .pin-tooltip {
   background: #fff;
-  width: 130px;
-  height: 130px;
+  width: 150px;
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -259,8 +265,7 @@ export default {
 @media screen and (max-width: 1200px) {
   .pin-content {
     padding: 20px 10px;
-    max-width: 100%;
-    margin: 0 110px;
+    margin: 0 115px;
   }
   .pin-content p {
     font-size: 20px;
