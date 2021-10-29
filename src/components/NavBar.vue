@@ -19,7 +19,7 @@
           <a
             @click="switchBasicsVisibility"
             class="menu-item-link-non-closing"
-            :class="[basicsLink ? 'active-link' : '']"
+            :class="[basicsLinkActive ? 'active-section-link' : '']"
             >The Basics of Greensock</a
           >
           <img class="menu-item-img" src="@/assets/navigation/greensock.png" />
@@ -97,6 +97,7 @@
             to="/"
             @click="switchScrollVisibility"
             class="menu-item-link-non-closing"
+            :class="[scrollLinkActive ? 'active-section-link' : '']"
             >Scroll Animation</a
           >
           <img
@@ -112,7 +113,7 @@
             <li class="menu-item">
               <router-link
                 to="/multiple"
-                class="menu-item-link"
+                class="scroll menu-item-link"
                 id="listed-item"
                 >Multiple scroll animation</router-link
               >
@@ -129,7 +130,10 @@
               </div>
             </li>
             <li class="menu-item">
-              <router-link to="/pin" class="menu-item-link" id="listed-item"
+              <router-link
+                to="/pin"
+                class="scroll menu-item-link"
+                id="listed-item"
                 >Scroll with pin animation</router-link
               >
               <img class="menu-item-img" src="@/assets/navigation/pin.png" />
@@ -142,7 +146,10 @@
               </div>
             </li>
             <li class="menu-item">
-              <router-link to="/rocket" class="menu-item-link" id="listed-item"
+              <router-link
+                to="/rocket"
+                class="scroll menu-item-link"
+                id="listed-item"
                 >Scroll Rocket</router-link
               >
               <img class="menu-item-img" src="@/assets/navigation/rocket.png" />
@@ -153,7 +160,10 @@
               </div>
             </li>
             <li class="menu-item">
-              <router-link to="/image" class="menu-item-link" id="listed-item"
+              <router-link
+                to="/image"
+                class="scroll menu-item-link"
+                id="listed-item"
                 >CSS scrollable image</router-link
               >
               <img class="menu-item-img" src="@/assets/navigation/image.png" />
@@ -180,7 +190,8 @@ export default {
     return {
       basicsVisible: false,
       scrollVisible: false,
-      basicsLink: false,
+      basicsLinkActive: false,
+      scrollLinkActive: false,
     };
   },
 
@@ -201,9 +212,14 @@ export default {
       this.basicsVisible = false;
       this.scrollVisible = false;
     },
-    isLinkActiveBasics() {
-      this.basicsLink = Array.from(
+    isBasicsLinkActive() {
+      this.basicsLinkActive = Array.from(
         document.getElementsByClassName("basics")
+      ).some((el) => el.classList.contains("router-link-active"));
+    },
+    isScrollLinkActive() {
+      this.scrollLinkActive = Array.from(
+        document.getElementsByClassName("scroll")
       ).some((el) => el.classList.contains("router-link-active"));
     },
   },
@@ -228,7 +244,8 @@ export default {
     document
       .getElementsByClassName("menu-open")[0]
       .addEventListener("click", (e) => {
-        this.isLinkActiveBasics();
+        this.isBasicsLinkActive();
+        this.isScrollLinkActive();
         t1.reversed(!t1.reversed());
         this.$emit("click", e);
       });
@@ -236,7 +253,8 @@ export default {
     document
       .getElementsByClassName("menu-close")[0]
       .addEventListener("click", (e) => {
-        this.isLinkActiveBasics();
+        this.isBasicsLinkActive();
+        this.isScrollLinkActive();
         t1.reversed(!t1.reversed());
         this.$emit("click", e);
       });
@@ -244,7 +262,8 @@ export default {
     Array.from(document.getElementsByClassName("menu-item-link")).forEach(
       (el) => {
         el.addEventListener("click", (e) => {
-          this.isLinkActiveBasics();
+          this.isBasicsLinkActive();
+          this.isScrollLinkActive();
           t1.reversed(!t1.reversed());
           this.$emit("click", e);
         });
@@ -262,8 +281,11 @@ export default {
 }
 
 .router-link-active,
-.active-link {
+.active-section-link {
   text-decoration: underline !important;
+}
+
+.router-link-active {
   text-decoration-style: dashed !important;
 }
 
