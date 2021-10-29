@@ -136,7 +136,7 @@ nav img:nth-child(3) {
   margin-right: 20px;
 }
 nav img {
-  width: 40px;
+  width: 30px;
   visibility: hidden;
 }
 .home {
