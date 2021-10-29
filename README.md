@@ -23,7 +23,7 @@ what have been done navbar-wise:<br/>
 improvements/additions for course code:<br/>
 :white_check_mark: fix Reveal view responsiveness<br/>
 :white_check_mark: CSS tweaks<br/>
-:white_check_mark: update Home view conten by:<br/>
+:white_check_mark: update Home view content with:<br/>
 :heavy_check_mark: adding github + linkedin links<br/>
 :heavy_check_mark: showing an img on hover<br/>
 :heavy_check_mark: adding animation to links on hover<br/>
