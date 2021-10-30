@@ -16,12 +16,13 @@
 
     <div class="loader-home">
       <div class="loader-overlay"></div>
-      <video muted loop>
-        <source
-          src="@/assets/basics/loader/highendcooking.mp4"
-          type="video/mp4"
-        />
-      </video>
+      <video
+        id="backVideo"
+        muted
+        loop
+        playsinline
+        src="@/assets/basics/loader/highendcooking.mp4"
+      ></video>
       <div class="loader-home-content">
         <h1>ADAMO EXPERIENCE.</h1>
         <div class="loader-middle-line"></div>
@@ -58,7 +59,7 @@ export default {
         .to(".f2", { y: "-100%" })
         .to(".loader-container", { autoAlpha: 0, duration: 0.8, delay: 0.7 })
         .add(() => {
-          document.querySelector("video").play();
+          document.querySelector("#backVideo").play();
         }, "-=0.8")
         .add(() => {
           document.querySelector(".loader-container").style.display = "none";
@@ -185,13 +186,28 @@ export default {
   z-index: 1;
 }
 
-video {
+#backVideo {
   object-fit: cover;
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  #backVideo {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  #backVideo {
+    width: auto;
+    height: 100%;
+  }
 }
 
 .loader-home-content {
