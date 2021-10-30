@@ -226,17 +226,23 @@ export default {
         document.getElementsByClassName("scroll")
       ).some((el) => el.classList.contains("router-link-active"));
     },
+    onClick(e, TL) {
+      this.isBasicsLinkActive();
+      this.isScrollLinkActive();
+      TL.reversed(!TL.reversed());
+      this.$emit("click", e);
+    },
   },
 
   mounted() {
-    const t1 = gsap.timeline({ paused: true });
+    const TL = gsap.timeline({ paused: true });
 
-    t1.to(".nav-container", 1, {
+    TL.to(".nav-container", 1, {
       left: 0,
       ease: "Power2.easeInOut",
     });
 
-    t1.staggerFrom(
+    TL.staggerFrom(
       ".menu > div",
       0.8,
       { y: 100, opacity: 0, ease: "Power2.easeOut" },
@@ -244,33 +250,18 @@ export default {
       "-=0.4"
     );
 
-    t1.reverse();
+    TL.reverse();
     document
       .getElementsByClassName("menu-open")[0]
-      .addEventListener("click", (e) => {
-        this.isBasicsLinkActive();
-        this.isScrollLinkActive();
-        t1.reversed(!t1.reversed());
-        this.$emit("click", e);
-      });
+      .addEventListener("click", (e) => this.onClick(e, TL));
 
     document
       .getElementsByClassName("menu-close")[0]
-      .addEventListener("click", (e) => {
-        this.isBasicsLinkActive();
-        this.isScrollLinkActive();
-        t1.reversed(!t1.reversed());
-        this.$emit("click", e);
-      });
+      .addEventListener("click", (e) => this.onClick(e, TL));
 
     Array.from(document.getElementsByClassName("menu-item-link")).forEach(
       (el) => {
-        el.addEventListener("click", (e) => {
-          this.isBasicsLinkActive();
-          this.isScrollLinkActive();
-          t1.reversed(!t1.reversed());
-          this.$emit("click", e);
-        });
+        el.addEventListener("click", (e) => this.onClick(e, TL));
       }
     );
   },
