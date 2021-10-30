@@ -20,7 +20,13 @@
 
     <div class="home">
       <div class="overlay"></div>
-      <video id="backVideo" autoplay muted loop oncanplay="this.muted=true">
+      <video
+        id="backVideo"
+        autoplay
+        loop
+        playsinline
+        src="@/assets/basics/reveal/grappe-video.mp4"
+      >
         <source
           src="@/assets/basics/reveal/grappe-video.mp4"
           type="video/mp4"
