@@ -183,17 +183,6 @@ nav img {
   }
 }
 
-@media (max-width: 767px) {
-  #backVideo {
-    display: none;
-  }
-  .home {
-    background: url("../../assets/basics/reveal/background.png");
-    background-size: cover;
-    z-index: -1;
-  }
-}
-
 .home-content {
   margin: auto;
   position: relative;
