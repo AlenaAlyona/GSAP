@@ -43,6 +43,12 @@
 
 <script>
 import gsap from "gsap";
+let navLinks;
+let imgsNav;
+let title;
+let verticalLine;
+let grapesLogo;
+let homeBtn;
 
 export default {
   name: "Reveal",
@@ -75,13 +81,26 @@ export default {
   },
 
   mounted() {
-    const navLinks = document.querySelectorAll(".container-nav a");
-    const imgsNav = document.querySelectorAll(".nav-img");
-    const title = document.querySelector(".home-title");
-    const verticalLine = document.querySelector(".middle-line");
-    const grapesLogo = document.querySelector(".home-content-img");
-    const homeBtn = document.querySelector(".home-content button");
+    navLinks = document.querySelectorAll(".container-nav a");
+    imgsNav = document.querySelectorAll(".nav-img");
+    title = document.querySelector(".home-title");
+    verticalLine = document.querySelector(".middle-line");
+    grapesLogo = document.querySelector(".home-content-img");
+    homeBtn = document.querySelector(".home-content button");
     window.addEventListener(
+      "load",
+      this.revealAnimation(
+        title,
+        verticalLine,
+        grapesLogo,
+        homeBtn,
+        navLinks,
+        imgsNav
+      )
+    );
+  },
+  beforeUnmount() {
+    window.removeEventListener(
       "load",
       this.revealAnimation(
         title,
