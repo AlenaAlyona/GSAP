@@ -58,7 +58,7 @@ export default {
     ) {
       const TLFade = gsap.timeline({ paused: true });
       TLFade.from(title, { autoAlpha: 0, y: -50, delay: 0.2 })
-        .to(verticalLine, { height: 150 }, "-=0.2")
+        .from(verticalLine, { autoAlpha: 0 }, "-=0.2")
         .from(grapesLogo, { autoAlpha: 0, y: -50 }, "-=0.2")
         .from(homeBtn, { autoAlpha: 0, y: -50 }, "-=0.2")
         .from(
@@ -202,12 +202,13 @@ nav img {
   line-height: 1.1;
   visibility: hidden;
 }
-.home-content .middle-line {
-  height: 0px;
+.middle-line {
+  height: 150px;
   width: 2px;
   background: #fff;
   margin: 40px auto;
   position: relative;
+  visibility: hidden;
 }
 
 .home-content img {
