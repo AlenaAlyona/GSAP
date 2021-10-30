@@ -26,12 +26,7 @@
         loop
         playsinline
         src="@/assets/basics/reveal/grappe-video.mp4"
-      >
-        <source
-          src="@/assets/basics/reveal/grappe-video.mp4"
-          type="video/mp4"
-        />
-      </video>
+      ></video>
       <div class="home-content">
         <h1 class="home-title">Exceptional vineyards.</h1>
         <div class="middle-line"></div>
