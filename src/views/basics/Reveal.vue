@@ -20,7 +20,7 @@
 
     <div class="home">
       <div class="overlay"></div>
-      <video autoplay muted loop>
+      <video id="backVideo" autoplay muted loop>
         <source
           src="@/assets/basics/reveal/grappe-video.mp4"
           type="video/mp4"
@@ -157,13 +157,40 @@ nav img {
   z-index: 1;
 }
 
-video {
+#backVideo {
   object-fit: cover;
   width: 100%;
-  height: 100%;
   position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  #backVideo {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  #backVideo {
+    width: auto;
+    height: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  #backVideo {
+    display: none;
+  }
+  .home {
+    background: url("../../assets/basics/reveal/background.png");
+    background-size: cover;
+    z-index: -1;
+  }
 }
 
 .home-content {
