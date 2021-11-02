@@ -282,6 +282,7 @@ export default {
 
 #home-nav-link.router-link-active {
   text-decoration: underline !important;
+  text-decoration-style: solid;
 }
 
 .router-link-active {
