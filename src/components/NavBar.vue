@@ -277,7 +277,7 @@ export default {
 
 a#home-nav-link.router-link-active.router-link-exact-active {
   text-decoration: underline !important;
-  text-decoration-style: solid;
+  text-decoration-style: solid !important;
 }
 
 .router-link-active,
