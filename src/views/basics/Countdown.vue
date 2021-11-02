@@ -39,6 +39,9 @@ export default {
   mounted() {
     window.addEventListener("load", this.countdownAnimation());
   },
+  beforeUnmount() {
+    window.removeEventListener("load", this.countdownAnimation());
+  },
 };
 </script>
 

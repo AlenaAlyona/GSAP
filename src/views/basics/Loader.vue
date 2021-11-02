@@ -74,6 +74,9 @@ export default {
   mounted() {
     window.addEventListener("load", this.loader());
   },
+  beforeUnmount() {
+    window.removeEventListener("load", this.loader());
+  },
 };
 </script>
 
