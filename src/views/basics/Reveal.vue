@@ -43,15 +43,20 @@
 
 <script>
 import gsap from "gsap";
-let navLinks;
-let imgsNav;
-let title;
-let verticalLine;
-let grapesLogo;
-let homeBtn;
 
 export default {
   name: "Reveal",
+
+  data() {
+    return {
+      navLinks: null,
+      imgsNav: null,
+      title: null,
+      verticalLine: null,
+      grapesLogo: null,
+      homeBtn: null,
+    };
+  },
 
   methods: {
     revealAnimation(
@@ -81,21 +86,21 @@ export default {
   },
 
   mounted() {
-    navLinks = document.querySelectorAll(".container-nav a");
-    imgsNav = document.querySelectorAll(".nav-img");
-    title = document.querySelector(".home-title");
-    verticalLine = document.querySelector(".middle-line");
-    grapesLogo = document.querySelector(".home-content-img");
-    homeBtn = document.querySelector(".home-content button");
+    this.navLinks = document.querySelectorAll(".container-nav a");
+    this.imgsNav = document.querySelectorAll(".nav-img");
+    this.title = document.querySelector(".home-title");
+    this.verticalLine = document.querySelector(".middle-line");
+    this.grapesLogo = document.querySelector(".home-content-img");
+    this.homeBtn = document.querySelector(".home-content button");
     window.addEventListener(
       "load",
       this.revealAnimation(
-        title,
-        verticalLine,
-        grapesLogo,
-        homeBtn,
-        navLinks,
-        imgsNav
+        this.title,
+        this.verticalLine,
+        this.grapesLogo,
+        this.homeBtn,
+        this.navLinks,
+        this.imgsNav
       )
     );
   },
@@ -103,12 +108,12 @@ export default {
     window.removeEventListener(
       "load",
       this.revealAnimation(
-        title,
-        verticalLine,
-        grapesLogo,
-        homeBtn,
-        navLinks,
-        imgsNav
+        this.title,
+        this.verticalLine,
+        this.grapesLogo,
+        this.homeBtn,
+        this.navLinks,
+        this.imgsNav
       )
     );
   },
