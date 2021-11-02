@@ -26,6 +26,7 @@
         loop
         playsinline
         src="@/assets/basics/reveal/grappe-video.mp4"
+        poster="@/assets/basics/reveal/poster.png"
       ></video>
       <div class="home-content">
         <h1 class="home-title">Exceptional vineyards.</h1>

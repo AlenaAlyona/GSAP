@@ -22,6 +22,7 @@
         loop
         playsinline
         src="@/assets/basics/loader/highendcooking.mp4"
+        poster="@/assets/basics/loader/poster.png"
       ></video>
       <div class="loader-home-content">
         <h1>ADAMO EXPERIENCE.</h1>
