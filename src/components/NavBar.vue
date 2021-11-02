@@ -275,7 +275,7 @@ export default {
   top: 0;
 }
 
-#home-nav-link.router-link-active {
+a#home-nav-link.router-link-active {
   text-decoration: underline !important;
   text-decoration-style: solid;
 }
