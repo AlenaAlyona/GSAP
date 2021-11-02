@@ -275,14 +275,14 @@ export default {
   top: 0;
 }
 
-.router-link-active,
-.active-section-link {
-  text-decoration: underline !important;
-}
-
 #home-nav-link.router-link-active {
   text-decoration: underline !important;
   text-decoration-style: solid;
+}
+
+.router-link-active,
+.active-section-link {
+  text-decoration: underline !important;
 }
 
 .router-link-active {
