@@ -431,9 +431,9 @@ export default {
   font-style: italic;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 1024px) {
   .menu-item-img {
-    height: 10vh;
+    height: 8vh;
   }
 }
 
@@ -443,9 +443,9 @@ export default {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 411px) {
   .menu-item-img {
-    height: 6vh;
+    height: 4vh;
   }
 }
 </style>
