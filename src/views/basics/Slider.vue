@@ -54,35 +54,35 @@ import gsap from "gsap";
 
 export default {
   name: "Slider",
+  data() {
+    return {
+      btnRight: null,
+      btnLeft: null,
+      slides: null,
+      indexIndication: null,
+      container: null,
+      index: 0,
+    };
+  },
 
-  mounted() {
-    const btnRight = document.querySelector(".slider-btn-next");
-    const btnLeft = document.querySelector(".slider-btn-prev");
-    const container = document.querySelector(".slider-wrapper");
-    const slides = Array.from(document.querySelectorAll(".slider-slide"));
-    const indexIndication = document.querySelector(
-      ".slider-counter span:nth-child(1)"
-    );
-    let index = 0;
-
-    function animRight() {
+  methods: {
+    animRight() {
       const TLRight = gsap.timeline();
 
-      TLRight.set(indexIndication, {
-        innerText: index + 1,
-      }).to(slides[index], { duration: 0.6, x: 0 });
-    }
-
-    function animLeft() {
+      TLRight.set(this.indexIndication, {
+        innerText: this.index + 1,
+      }).to(this.slides[this.index], { duration: 0.6, x: 0 });
+    },
+    animLeft() {
       const TLLEFT = gsap.timeline();
 
-      TLLEFT.set(indexIndication, {
-        innerText: index,
-      }).to(slides[index], { duration: 0.6, x: "-100%" });
-    }
+      TLLEFT.set(this.indexIndication, {
+        innerText: this.index,
+      }).to(this.slides[this.index], { duration: 0.6, x: "-100%" });
+    },
 
-    function negation() {
-      gsap.to(container, {
+    negation() {
+      gsap.to(this.container, {
         keyframes: [
           { duration: 0.1, x: -4 },
           { duration: 0.1, x: 4 },
@@ -90,34 +90,51 @@ export default {
           { duration: 0.1, x: 0 },
         ],
       });
-    }
+    },
 
-    function handleDirection(direction) {
+    handleDirection(direction) {
       if (direction === "next") {
-        if (index === slides.length - 1) {
-          negation();
+        if (this.index === this.slides.length - 1) {
+          this.negation();
           return;
         }
 
-        index++;
-        animRight();
+        this.index++;
+        this.animRight();
       } else if (direction === "prev") {
-        if (index === 0) {
-          negation();
+        if (this.index === 0) {
+          this.negation();
           return;
         }
 
-        animLeft();
-        index--;
+        this.animLeft();
+        this.index--;
       }
-    }
+    },
+  },
 
-    btnRight.addEventListener("click", () => {
-      handleDirection("next");
+  mounted() {
+    this.btnRight = document.querySelector(".slider-btn-next");
+    this.btnLeft = document.querySelector(".slider-btn-prev");
+    this.container = document.querySelector(".slider-wrapper");
+    this.slides = Array.from(document.querySelectorAll(".slider-slide"));
+    this.indexIndication = document.querySelector(
+      ".slider-counter span:nth-child(1)"
+    );
+    this.btnRight.addEventListener("click", () => {
+      this.handleDirection("next");
     });
 
-    btnLeft.addEventListener("click", () => {
-      handleDirection("prev");
+    this.btnLeft.addEventListener("click", () => {
+      this.handleDirection("prev");
+    });
+  },
+  beforeUnmount() {
+    this.btnRight.removeEventListener("click", () => {
+      this.handleDirection("next");
+    });
+    this.btnLeft.removeEventListener("click", () => {
+      this.handleDirection("prev");
     });
   },
 };
