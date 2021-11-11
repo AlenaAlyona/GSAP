@@ -1,13 +1,13 @@
 # GSAP
 
-[alena-alyona-gsap.netlify.app](https://alena-alyona-gsap.netlify.app/)
+[alena-alyona-gsap.netlify.app](https://alena-alyona-gsap.netlify.app/)<br/>
 ![](./src/assets/readme/fullscreen.gif)<br/>
 When I started <em>Master JavaScript Animations with Greensock</em> course, I decided to make a small show case out of it. This course consisted of 2 parts: basics of Greensock and scroll animation.<br/>
 
 To properly display them I chose to add a navbar. I found this [one](https://github.com/codegridweb/fullscreen-overlay-responsive-navigation-menu-css-marquee-animation) by [codegridweb](https://github.com/codegridweb). Plus point - it's made using GSAP animation.
 I needed to add some changes, so it works well for my project.
 
-what have been done navbar-wise:<br/>
+<strong>what have been done navbar-wise:</strong><br/>
 :white_check_mark: add vue router<br/>
 :white_check_mark: create a routing directory & configuration file<br/>
 :white_check_mark: replace anchor tags with router-link<br/>
@@ -20,7 +20,7 @@ what have been done navbar-wise:<br/>
 :white_check_mark: fix `menu-item-img` position for anchor tags<br/>
 :white_check_mark: fix `menu-item-img` responsiveness<br/>
 
-improvements/additions for course code:<br/>
+<strong>improvements/additions for course code:</strong><br/>
 :white_check_mark: fix Reveal view responsiveness<br/>
 :white_check_mark: CSS tweaks<br/>
 :white_check_mark: update Home view content with:<br/>
